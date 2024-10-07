@@ -9,70 +9,74 @@
   max-width: 100vw;
   width: 100%;
   margin: 0 auto;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Sombra exterior para darle profundidad */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4); /* Deeper shadow for more depth */
   height: 68.6vh;
-  overflow: hidden; /* Evita desbordamientos */
-  animation: fadeIn 1s ease-in-out; /* Animación suave al cargar */
-
+  overflow: hidden;
+  animation: fadeIn 1s ease-in-out, slideIn 0.5s ease-in-out; /* Added slide-in animation */
 }
 
-/* Animación de fadeIn */
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+/* List Styles */
+li {
+  list-style-type: none;
 }
+
+h2 {
+  color: white;
+  font-size: 36px; /* Slightly larger font */
+  font-weight: 700; /* Corrected weight */
+  padding: 30px;
+  margin-bottom: 50px;
+}
+
 
 .referencia {
-  background-color: rgba(30, 30, 30, 0.95); /* Fondo más oscuro y translúcido */
+  background-color: rgba(30, 30, 30, 0.95);
   padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Sombra más pronunciada */
+  border-radius: 20px; /* Slightly more rounded corners */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Deeper shadow */
   color: #e4e3d9;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, filter 0.3s ease; /* Added filter transition */
   text-align: center;
   max-width: 30%;
   width: 100%;
-  backdrop-filter: blur(5px); /* Añadir desenfoque para mayor dinamismo */
-  cursor: pointer; /* Indicador de que es interactivo */
+  backdrop-filter: blur(8px); /* Increased blur for more depth */
+  cursor: pointer;
 }
 
 .referencia:hover {
-  transform: scale(1.08); /* Agrandar más al hacer hover */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6); /* Sombra más intensa en hover */
-  background-color: rgba(30, 30, 30, 1); /* Fondo más opaco en hover */
+  transform: scale(1.05); /* Slightly smaller scale */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.7); /* Enhanced shadow on hover */
+  background-color: rgba(30, 30, 30, 1);
+  filter: brightness(1.05); /* Subtle brightness effect */
 }
 
 .referencia h3 {
   color: #d4af37;
-  font-size: 2rem; /* Un poco más grande para destacar más */
+  font-size: 1.5rem; /* Increased size */
   font-weight: bold;
   letter-spacing: 1px;
   margin-bottom: 10px;
   text-transform: uppercase;
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-  transition: color 0.3s ease; /* Transición suave en color */
+  text-shadow: 1px 1px 5px rgba(13, 209, 98, 0.5);
+  transition: color 0.3s ease, transform 0.3s ease; /* Added transform transition */
 }
 
 .referencia:hover h3 {
-  color: #fff700; /* Cambiar a un amarillo brillante en hover */
+  color: #fff700;
+  transform: translateY(-2px); /* Slight lift effect on hover */
 }
 
 .referencia p {
   color: #f1f1f1;
-  font-size: 1.2rem;
+  font-size: 1rem; /* Set to rem for better scaling */
   line-height: 1.6;
   margin-top: 10px;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
-  opacity: 0.9; /* Un poco translúcido para un efecto más suave */
-  transition: opacity 0.3s ease; /* Suavizar la opacidad */
+  opacity: 0.9;
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Added transform transition */
 }
 
 .referencia:hover p {
-  opacity: 1; /* Texto más visible en hover */
+  opacity: 1;
+  transform: translateY(2px); /* Lift effect on text */
 }

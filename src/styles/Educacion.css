@@ -2,7 +2,7 @@
 .educacion {
     display: flex;
     flex-direction: row;
-    height: 77vh; /* Para ocupar toda la altura de la ventana */
+    height: 76.4vh; /* Para ocupar toda la altura de la ventana */
     justify-content: space-between; /* Espacio entre los iconos y la tabla */
 }
 

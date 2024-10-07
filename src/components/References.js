@@ -3,8 +3,9 @@ import '../styles/References.css';
 
 const References = () => {
     const referencesData = [
-        { name: 'Juan Pérez', position: 'Gerente', company: 'Empresa ABC', email: 'juan.perez@abc.com' },
-        { name: 'Ana García', position: 'Líder de Proyecto', company: 'Empresa XYZ', email: 'ana.garcia@xyz.com' },
+        { name: 'German Edmundo Salcedo Diaz', position: 'Arquitecto', company: 'Independiente', cel:'3046754218'},
+        { name: 'Santiago Salcedo Mejia', position: 'Analista QA', company: 'HABI', cel: '3208464883' },
+        { name: 'Daniela Diaz', position: 'Profesional I TI', company: 'IPM', cel: '305 7070282' },
     ];
 
     return (
@@ -12,7 +13,9 @@ const References = () => {
             <h2>Referencias</h2>
             {referencesData.map((ref, index) => (
                 <div key={index} className="referencia">
-                    <strong>{ref.name}</strong> - {ref.position} en {ref.company}, <a href={`mailto:${ref.email}`}>{ref.email}</a>
+                    <li><strong>{ref.name}</strong></li>
+                    <li>{ref.position} en {ref.company}</li>
+                    <li>Numero de contacto: {ref.cel}</li>
                 </div>
             ))}
         </div>
