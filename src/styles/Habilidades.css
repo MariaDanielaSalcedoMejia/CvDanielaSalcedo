@@ -1,0 +1,74 @@
+
+
+.habilidadesTech{
+  background: linear-gradient(135deg,
+      rgba(21, 18, 18, 0.85),
+      rgba(85, 223, 10, 0.7));
+  /* Gradiente oscuro */
+  padding: 20px;
+  display: flex;
+  /* Usar flexbox para centrar el contenido */
+  flex-direction: column;
+  /* Disposición vertical del contenido */
+  justify-content: center;
+  /* Centrado vertical */
+  align-items: center;
+  /* Centrado horizontal */
+  height: 80%;
+  /* Asegúrate de que el contenedor ocupe toda la altura disponible */
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Mantiene el comportamiento responsivo */
+  gap: 80px; /* Espacio entre los elementos */
+  padding: 10px; /* Espacio interno del contenedor */
+  max-width: 80vw; /* Abarca el 100% del ancho de la ventana */
+  height: 70.5vh; /* Opcional: Abarca el 100% de la altura de la ventana */
+  justify-content: center; /* Centra los elementos horizontalmente */
+  align-items: center; /* Centra los elementos verticalmente */
+}
+
+.grid-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  transition: transform 0.2s;
+  margin: 70px;   /* Aumenta la separación entre los .grid-item */
+  gap:20px;
+}
+
+
+span {
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: 'Arial', sans-serif;  /* Asegúrate de usar una fuente atractiva */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Agrega una sombra de texto suave */
+  letter-spacing: 1px; /* Aumenta el espaciado entre letras para mejorar la legibilidad */
+  padding: 10px 20px; /* Agrega espacio interno alrededor del texto */
+  background-color: #aadd1142; /* Añade un fondo oscuro para resaltar el texto */
+  border-radius: 8px; /* Redondea los bordes */
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Suaviza las transiciones */
+}
+
+/* Efecto hover */
+span:hover {
+  transform: scale(1.1); /* Aumenta ligeramente el tamaño cuando se pasa el cursor */
+  background-color:  rgba(64, 65, 64, 0.7);
+}
+
+.grid-item img {
+  display:flex;
+  width: 100px; /* Ancho de la imagen */
+  height: 100px; /* Alto de la imagen */
+  object-fit: contain; /* Mantiene la proporción de la imagen */
+  border-radius: 50%; /* Hace la imagen redonda */
+
+}
+
+.grid-item:hover {
+  transform: scale(1.1); /* Aumenta el tamaño al pasar el mouse */
+}

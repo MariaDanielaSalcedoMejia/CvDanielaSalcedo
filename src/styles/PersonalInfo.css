@@ -1,0 +1,118 @@
+/* === Información Personal (Modo Dark) === */
+.informacionPersonal {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  /* Dos columnas: 1 para la imagen, 2 para el contenido */
+  align-items: center;
+  gap: 30px;
+  /* Espacio entre la imagen y el texto */
+  background-color: #1e1e1e;
+  /* Fondo oscuro */
+  padding: 30px;
+  margin-top: 20px;
+  border-radius: 15px;
+  /* Bordes redondeados */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  /* Sombra suave */
+}
+
+/* Contenedor de la imagen de perfil */
+.fotoPerfil {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0px;
+  /* Eliminar márgenes innecesarios */
+  padding: 20px;
+  background: white;
+}
+
+/* Imagen de perfil redonda */
+.fotoPerfil img {
+  max-width: 250px;
+  /* Tamaño ajustado */
+  border-radius: 50%;
+  border: 5px solid rgba(85, 223, 10, 0.7);;
+  /* Borde dorado alrededor de la imagen */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+  /* Sombra en la imagen */
+}
+
+.detallesPersonales {
+  background: linear-gradient(135deg,
+      rgb(0, 0, 0),
+      rgba(21, 18, 4, 0.7));
+  /* Gradiente oscuro */
+  padding: 20px;
+  display: flex;
+  /* Usar flexbox para centrar el contenido */
+  flex-direction: column;
+  /* Disposición vertical del contenido */
+  justify-content: center;
+  /* Centrado vertical */
+  align-items: center;
+  /* Centrado horizontal */
+  height: 70%;
+  /* Asegúrate de que el contenedor ocupe toda la altura disponible */
+}
+
+.detallesPersonales h2 {
+  border-radius: 30px;
+  max-width: 60%;
+  /* Máximo ancho del h2 */
+  text-align: center;
+  /* Centrar el texto dentro del h2 */
+  text-align: center;
+  /* Centrar el nombre */
+  font-size: 1.8rem;
+  /* Reducir tamaño del texto */
+}
+
+/* === Texto Justificado (Modo Dark) === */
+.justified-text {
+  font-size: 1.2rem;
+  /* Tamaño de fuente mayor para mejor lectura */
+  line-height: 1.8;
+  /* Mayor separación entre líneas */
+  color: #f7efef;
+  /* Color gris claro */
+  background: linear-gradient(135deg,
+      rgba(21, 18, 18, 0.85),
+      rgba(85, 223, 10, 0.7));
+  /* Gradiente oscuro */
+  padding: 20px;
+  /* Espaciado interno */
+  border-radius: 10px;
+  /* Bordes redondeados */
+  max-width: 60%;
+  /* Ancho máximo del contenedor */
+  margin: 20px auto;
+  /* Centrar horizontalmente */
+  display: flex;
+  /* Usar flexbox para centrar el contenido */
+  flex-direction: column;
+  /* Disposición vertical del contenido */
+  justify-content: center;
+  /* Centrado vertical */
+  align-items: center;
+  /* Centrado horizontal */
+}
+
+/* Adaptación para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+  .informacionPersonal {
+    grid-template-columns: 1fr;
+    /* Cambiar a una sola columna en pantallas pequeñas */
+    text-align: center;
+  }
+
+  .justified-text {
+    font-size: 1rem;
+    /* Reducir tamaño del texto */
+  }
+
+  .fotoPerfil img {
+    max-width: 200px;
+    /* Tamaño de la imagen más pequeño en pantallas pequeñas */
+  }
+}

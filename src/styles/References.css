@@ -1,0 +1,78 @@
+.referencia-container {
+  background: linear-gradient(135deg, rgba(21, 18, 18, 0.85), rgba(85, 223, 10, 0.7));
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  max-width: 100vw;
+  width: 100%;
+  margin: 0 auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Sombra exterior para darle profundidad */
+  height: 68.6vh;
+  overflow: hidden; /* Evita desbordamientos */
+  animation: fadeIn 1s ease-in-out; /* Animación suave al cargar */
+
+}
+
+/* Animación de fadeIn */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.referencia {
+  background-color: rgba(30, 30, 30, 0.95); /* Fondo más oscuro y translúcido */
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Sombra más pronunciada */
+  color: #e4e3d9;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  text-align: center;
+  max-width: 30%;
+  width: 100%;
+  backdrop-filter: blur(5px); /* Añadir desenfoque para mayor dinamismo */
+  cursor: pointer; /* Indicador de que es interactivo */
+}
+
+.referencia:hover {
+  transform: scale(1.08); /* Agrandar más al hacer hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6); /* Sombra más intensa en hover */
+  background-color: rgba(30, 30, 30, 1); /* Fondo más opaco en hover */
+}
+
+.referencia h3 {
+  color: #d4af37;
+  font-size: 2rem; /* Un poco más grande para destacar más */
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  transition: color 0.3s ease; /* Transición suave en color */
+}
+
+.referencia:hover h3 {
+  color: #fff700; /* Cambiar a un amarillo brillante en hover */
+}
+
+.referencia p {
+  color: #f1f1f1;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-top: 10px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+  opacity: 0.9; /* Un poco translúcido para un efecto más suave */
+  transition: opacity 0.3s ease; /* Suavizar la opacidad */
+}
+
+.referencia:hover p {
+  opacity: 1; /* Texto más visible en hover */
+}

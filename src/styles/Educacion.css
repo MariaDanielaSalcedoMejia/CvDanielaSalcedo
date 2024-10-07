@@ -1,0 +1,139 @@
+/* Contenedor principal para dividir en dos partes (30% para iconos y 70% para tabla) */
+.educacion {
+    display: flex;
+    flex-direction: row;
+    height: 77vh; /* Para ocupar toda la altura de la ventana */
+    justify-content: space-between; /* Espacio entre los iconos y la tabla */
+}
+
+/* Contenedor de los iconos a la izquierda */
+.categorias {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra los iconos verticalmente */
+    align-items: center; /* Centra horizontalmente en su mitad */
+    width: 20%; /* Ocupa el 30% del ancho de la pantalla */
+    gap: 80px; /* Espacio uniforme entre los iconos */
+    background-color: #2e2e2e; /* Fondo para los iconos */
+    padding: 20px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2); /* Sombra a la derecha del panel */
+}
+
+/* Estilo para las imágenes (iconos) */
+.categorias img {
+    width: 120px; /* Tamaño de la imagen (puedes ajustarlo) */
+    height: 120px;
+    border-radius: 50%; /* Hace que las imágenes sean redondas */
+    object-fit: cover; /* Ajusta la imagen dentro del contenedor */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Añade transición para el hover */
+    cursor: pointer; /* Cambia el cursor a pointer */
+}
+
+/* Efecto hover en los iconos */
+.categorias img:hover {
+    transform: scale(1.15); /* Efecto de agrandado en hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Sombra en hover */
+}
+
+/* Icono activo */
+.categorias img.active {
+    border: 4px solid #3498db; /* Color de borde para la imagen seleccionada */
+}
+
+/* Contenedor para la tabla (parte derecha) */
+.table-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centrado vertical */
+    align-items: center; /* Centrado horizontal */
+    width: 80%; /* Ocupa el 70% del ancho de la pantalla */
+    padding: 2rem;
+    background: linear-gradient(135deg, rgba(21, 18, 18, 0.85), rgba(85, 223, 10, 0.7)); /* Fondo con gradiente */
+    overflow-y: auto;
+    border-radius: 0;
+}
+
+/* Contenedor de la tabla */
+.table-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%; /* Ocupa el 70% del ancho de la pantalla */
+    padding: 2rem;
+      background: linear-gradient(135deg,
+      rgba(21, 18, 18, 0.85),
+      rgba(85, 223, 10, 0.7));
+    overflow-y: auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+}
+
+/* Estilos generales de la tabla */
+.table-container table {
+    width: 60%; /* Ajusta el ancho de la tabla */
+    border-collapse: separate; /* Usamos separate para aplicar bordes separados */
+    border-spacing: 0 10px; /* Espaciado entre las filas */
+}
+
+/* Cabecera de la tabla */
+.table-container th {
+    background-color: #333333;
+    color: #f0e5c9; /* Color más claro para el texto */
+    border-bottom: 3px solid #444444; /* Borde inferior más grueso */
+    padding: 15px;
+    text-transform: uppercase; /* Mayúsculas para un estilo moderno */
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+/* Filas de la tabla */
+.table-container td {
+    background-color: #1e1e1e;
+    color: #f3f3f3; /* Blanco suave para el texto */
+    padding: 15px;
+    font-size: 14px;
+    font-weight: 500;
+    border-bottom: 1px solid #444444; /* Borde inferior sutil */
+    border-radius: 10px; /* Bordes redondeados para las celdas */
+    transition: background 0.3s ease, transform 0.2s ease; /* Transición para hover */
+}
+
+/* Filas alternas */
+.table-container tr:nth-child(even) td {
+    background-color: #252525; /* Color de fondo diferente para filas alternas */
+}
+
+/* Efecto hover en las filas */
+.table-container tr:hover td {
+    background-color: #15ca395b; /* Color de fondo al hacer hover */
+    transform: translateY(-3px); /* Mueve la fila ligeramente hacia arriba */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.421); /* Sombra al hacer hover */
+}
+
+/* Resalta las celdas cuando se hace hover en la fila */
+.table-container td:hover {
+    background-color: #444444; /* Cambia de color cuando el mouse está sobre la celda */
+}
+
+/* Animaciones sutiles */
+.table-container td {
+    transition: all 0.3s ease; /* Transición suave para las celdas */
+}
+
+/* Bordes redondeados para la tabla */
+.table-container table {
+    border-radius: 15px;
+    overflow: hidden; /* Asegura que los bordes redondeados se apliquen a toda la tabla */
+}
+
+
+/* Responde mejor a pantallas más pequeñas */
+@media (max-width: 768px) {
+    .educacion {
+        flex-direction: column; /* Cambia a disposición vertical en pantallas pequeñas */
+    }
+    .categorias, .table-container {
+        width: 100%; /* Ambas partes ocupan el 100% del ancho */
+        height: auto; /* Ajusta la altura automáticamente */
+    }
+}
