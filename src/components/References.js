@@ -9,14 +9,16 @@ const References = () => {
     ];
 
     return (
+              
         <div className="referencia-container" id="referencias">
-            <h2>Referencias</h2>
             {referencesData.map((ref, index) => (
                 <div key={index} className="referencia">
                     <li><strong>{ref.name}</strong></li>
                     <li>{ref.position} en {ref.company}</li>
                     <li>Numero de contacto: {ref.cel}</li>
+
                 </div>
+                
             ))}
         </div>
     );

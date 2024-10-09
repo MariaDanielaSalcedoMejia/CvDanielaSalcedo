@@ -1,40 +1,39 @@
 .section {
   background: linear-gradient(135deg, rgba(21, 18, 18, 0.85), rgba(85, 223, 10, 0.7));
-  padding: 20px; /* Ajusta el padding según lo que necesites */
+  padding: 40px; /* Aumentar padding para más espacio */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 76.4vh; /* 100% de la altura del viewport */
+  height: 80vh; /* Ajustado para más equilibrio */
   width: 100%;
-  box-sizing: border-box; /* Asegúrate de que padding y border estén dentro del tamaño */
-  overflow: hidden; /* Evita que el contenido adicional cause scroll */
+  box-sizing: border-box;
+  overflow: hidden;
+  animation: fadeIn 1s ease-in-out; /* Animación de entrada */
 }
 
-
 .section-title {
-  font-size: 2.5rem;
-  color: #d4af37;
-  margin-top: 0px;
-  margin-bottom: 100px;
+  font-size: 3rem; /* Tamaño de fuente más grande */
+  color: #ffffff;
+  margin-top: 0;
+  margin-bottom: 50px; /* Reducir margen para mejor proporción */
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 3px;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Añadir sombra al texto */
-  background-color: rgba(85, 223, 10, 0.2);
-  padding: 10px 20px;
-  border-radius: 8px;
+  text-shadow: 2px 2px 7px rgba(0, 0, 0, 0.7); /* Sombra de texto más suave */
+  background-color: rgba(50, 57, 46, 0.4); /* Fondo más claro */
+  padding: 15px 30px; /* Más espacio alrededor del título */
+  border-radius: 12px; /* Bordes más redondeados */
 }
 
 .idioma-container {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 30px;
-  max-width: 60vw;
+  gap: 40px; /* Espacio más grande entre elementos */
+  max-width: 70vw;
   width: 80%;
   margin: 30px auto;
-  justify-items: center; /* Centra los elementos en el eje horizontal */
-  
+  justify-items: center;
 }
 
 .idioma {
@@ -43,40 +42,41 @@
   align-items: center;
   width: 100%;
   text-align: center;
+  transition: transform 0.3s ease; /* Efecto de flotación */
+  border: 2px solid rgba(85, 223, 10, 0.7); /* Borde decorativo */
+  padding: 10px; /* Añadir espacio interno */
+  border-radius: 12px;
 }
+
 
 .barra-progreso {
   background-color: #1e1e1e;
-  width: 70%;
-  height: 25px;
-  border-radius: 12px;
+  width: 75%;
+  height: 30px; /* Aumentar el tamaño de la barra */
+  border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Añadir sombra para darle más estilo */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); /* Sombra más notable */
 }
 
 .progreso {
-  background-color: #d4af37;
+  background: linear-gradient(135deg, rgba(85, 223, 10, 0.7), rgba(85, 223, 10, 0.5));
   height: 100%;
   text-align: center;
   color: white;
-  line-height: 25px;
-  border-radius: 12px 0 0 12px;
-  transition: width 0.4s ease;
-  box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.4); /* Añadir un efecto de sombra interior */
+  line-height: 30px; /* Ajustar línea para mayor altura */
+  border-radius: 15px 0 0 15px;
+  transition: width 0.5s ease;
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.5); /* Efecto de profundidad interior */
 }
 
-/* Estilos adicionales para hacer que los textos sean más atractivos */
 .idioma h3 {
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.75rem; /* Fuente más grande */
   font-weight: bold;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-  margin-right: 20px;
+  text-shadow: 1px 1px 7px rgba(0, 0, 0, 0.6); /* Sombra de texto más suave */
+  margin-right: 30px; /* Más espacio entre el texto y la barra */
 }
 
-.idioma:hover .progreso {
-  transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el mouse */
-  background-color: rgba(85, 223, 10, 0.7); /* Cambio de color en hover */
-}
+

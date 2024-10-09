@@ -14,7 +14,7 @@
   /* Centrado vertical */
   align-items: center;
   /* Centrado horizontal */
-  height: 80%;
+  height: 100%;
   /* Asegúrate de que el contenedor ocupe toda la altura disponible */
 }
 .grid-container {
@@ -35,7 +35,7 @@
   justify-content: center;
   text-align: center;
   height: 100%;
-  transition: transform 0.2s;
+  transition: transform 0.1s;
   margin: 70px;   /* Aumenta la separación entre los .grid-item */
   gap:20px;
 }
