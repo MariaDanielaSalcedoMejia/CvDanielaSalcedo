@@ -35,3 +35,30 @@
 .barraNavegacion a:hover {
   color: #fff; /* Efecto hover */
 }
+/* Adaptación solo para pantallas pequeñas (celulares) */
+@media screen and (max-width: 768px) {
+
+  .header-container {
+    padding: 20px;
+    background-size: cover;
+    background-position: center;
+    text-align: center; /* Centrar el texto */
+  }
+
+  .header-title {
+    font-size: 1.5rem; /* Reducir tamaño del título */
+    margin-bottom: 15px; /* Espacio debajo del título */
+  }
+
+  /* Barra de navegación */
+  .barraNavegacion {
+    flex-direction: column; /* Apilar enlaces en columna */
+    gap: 20px; /* Reducir espacio entre enlaces */
+    align-items: center; /* Centrar los enlaces */
+    margin-top: 10px;
+  }
+
+  .barraNavegacion a {
+    font-size: 1.2rem; /* Reducir el tamaño del texto en los enlaces */
+  }
+}

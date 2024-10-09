@@ -15,6 +15,7 @@
   animation: fadeIn 1s ease-in-out, slideIn 0.5s ease-in-out; /* Added slide-in animation */
 }
 
+
 /* List Styles */
 li {
   list-style-type: none;
@@ -34,6 +35,12 @@ h2 {
   border-radius: 8px;
 }
 
+.fotoContacto{
+  width: 30%;
+  height: 70%;
+  border-radius: 20%;
+}
+
 
 .referencia {
     color: white;
@@ -45,6 +52,7 @@ h2 {
     padding: 10px 20px;
     background-color: #30371842;
     border-radius: 8px;
+    margin-right: 30px;
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
@@ -84,4 +92,51 @@ h2 {
 .referencia:hover p {
   opacity: 1;
   transform: translateY(2px); /* Lift effect on text */
+}
+
+@media (max-width: 768px) {
+  .referencia-container {
+    flex-direction: column; /* Cambia a disposición vertical */
+    padding: 20px; /* Reduce el padding */
+    height: auto; /* Ajusta la altura automáticamente */
+    gap: 20px; /* Reduce el espacio entre elementos */
+  }
+
+  .referencia {
+    padding: 10px 15px; /* Reduce el padding */
+    font-size: 1.2rem; /* Ajusta el tamaño de fuente */
+    text-align: center; /* Centra el texto */
+  }
+
+  .referencia h3 {
+    font-size: 1.3rem; /* Reduce el tamaño del título */
+    margin-bottom: 5px; /* Ajusta el margen inferior */
+  }
+
+  .referencia p {
+    font-size: 0.9rem; /* Reduce el tamaño del párrafo */
+    line-height: 1.4; /* Ajusta el interlineado */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .referencia-container {
+    flex-direction: row; /* Mantiene la disposición horizontal */
+    padding: 30px; /* Ajusta el padding */
+    height: auto; /* Deja que la altura se ajuste automáticamente */
+  }
+
+  .referencia {
+    padding: 20px; /* Ajusta el padding interno */
+    font-size: 1.3rem; /* Ajusta el tamaño de fuente */
+  }
+
+  .referencia h3 {
+    font-size: 1.4rem; /* Reduce el tamaño del título */
+  }
+
+  .referencia p {
+    font-size: 1rem; /* Ajusta el tamaño del texto */
+    line-height: 1.5; /* Mejora el espaciado entre líneas */
+  }
 }

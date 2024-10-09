@@ -72,3 +72,60 @@ span:hover {
 .grid-item:hover {
   transform: scale(1.1); /* Aumenta el tamaño al pasar el mouse */
 }
+@media (max-width: 768px) {
+  .habilidadesTech {
+    padding: 10px; /* Reduce el padding en pantallas pequeñas */
+  }
+
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr); /* Reduce el número de columnas a 2 */
+    gap: 20px; /* Reduce el espacio entre los elementos */
+    padding: 10px; /* Reduce el padding */
+    max-width: 100vw; /* Ocupa todo el ancho de la pantalla */
+    height: auto; /* Ajusta la altura automáticamente */
+  }
+
+  .grid-item {
+    margin: 10px; /* Reduce el margen */
+    gap: 10px; /* Reduce el espacio entre el texto y la imagen */
+  }
+
+  .grid-item img {
+    width: 60px; /* Reduce el tamaño de la imagen */
+    height: 60px;
+  }
+
+  span {
+    font-size: 1.2rem; /* Reduce el tamaño del texto */
+    padding: 5px 10px; /* Reduce el padding */
+    letter-spacing: 0.5px; /* Reduce el espaciado entre letras */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .habilidadesTech {
+    padding: 30px; /* Ajusta el padding */
+    height: auto; /* Permite que la altura se ajuste según el contenido */
+  }
+
+  .grid-container {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); /* Ajusta el tamaño mínimo de las columnas */
+    gap: 60px; /* Reduce el espacio entre los elementos */
+    max-width: 90vw; /* Ajusta el ancho */
+  }
+
+  .grid-item {
+    margin: 50px; /* Reduce el margen entre los items */
+  }
+
+  span {
+    font-size: 2rem; /* Reduce el tamaño de la fuente */
+    padding: 8px 16px; /* Ajusta el padding del texto */
+  }
+
+  .grid-item img {
+    width: 90px; /* Reduce el tamaño de las imágenes */
+    height: 90px;
+  }
+}
+

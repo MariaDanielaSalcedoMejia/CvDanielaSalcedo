@@ -48,3 +48,43 @@ footer .footer-text {
   text-align: center; /* Centrar texto, si es necesario */
   flex: 1; /* Permitir que este elemento ocupe el espacio disponible */
 }
+
+
+
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column; /* Cambia a disposición vertical */
+    padding: 10px; /* Reduce el padding */
+    font-size: 1rem; /* Reduce el tamaño de fuente */
+  }
+
+  footer .social-icons {
+    gap: 5px; /* Reduce el espacio entre los íconos */
+  }
+
+  footer p {
+    font-size: 0.8rem; /* Reduce el tamaño del texto */
+  }
+
+  footer .footer-text {
+    margin-top: 10px; /* Añade un margen superior para separar del contenido anterior */
+    text-align: center; /* Asegura que el texto esté centrado */
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  footer {
+    padding: 12px 20px; /* Reduce el padding */
+    font-size: 1.2rem; /* Ajusta el tamaño de fuente */
+    justify-content: space-between; /* Aumenta el espacio entre los elementos */
+  }
+
+  footer .social-icons a {
+    font-size: 1.2rem; /* Reduce el tamaño de los iconos sociales */
+  }
+
+  footer p {
+    font-size: 0.85rem; /* Ajusta el tamaño del texto */
+  }
+}
+
+

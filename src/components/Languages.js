@@ -13,7 +13,7 @@ const LanguageProgress = ({ language, level, percentage }) => (
 const Languages = () => {
     const languagesData = [
         { language: 'Español', level: 'Nativo', percentage: 100 },
-        { language: 'Inglés', level: 'Avanzado', percentage: 75 },
+        { language: 'Inglés', level: 'Intermedio', percentage: 60 },
         { language: 'Francés', level: 'Intermedio', percentage: 60 },
     ];
 

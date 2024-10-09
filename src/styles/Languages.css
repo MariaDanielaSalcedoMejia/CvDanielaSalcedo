@@ -15,8 +15,8 @@
 .section-title {
   font-size: 3rem; /* Tamaño de fuente más grande */
   color: #ffffff;
-  margin-top: 0;
-  margin-bottom: 50px; /* Reducir margen para mejor proporción */
+  margin-top: 30px;
+  margin-bottom: 20px; /* Reducir margen para mejor proporción */
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -34,6 +34,7 @@
   width: 80%;
   margin: 30px auto;
   justify-items: center;
+  margin-bottom: 30px;
 }
 
 .idioma {
@@ -77,6 +78,65 @@
   text-transform: uppercase;
   text-shadow: 1px 1px 7px rgba(0, 0, 0, 0.6); /* Sombra de texto más suave */
   margin-right: 30px; /* Más espacio entre el texto y la barra */
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 20px; /* Reduce el padding en pantallas pequeñas */
+    height: auto; /* Ajusta la altura automáticamente */
+  }
+
+  .section-title {
+    font-size: 2rem; /* Reduce el tamaño de fuente */
+    padding: 10px 20px; /* Ajusta el padding */
+  }
+
+  .idioma-container {
+    grid-template-columns: 1fr; /* Se asegura que haya una sola columna */
+    gap: 20px; /* Reduce el espacio entre los elementos */
+    width: 90vw; /* Aumenta el ancho para aprovechar la pantalla */
+  }
+
+  .idioma {
+    flex-direction: column; /* Cambia la dirección a vertical */
+    gap: 15px; /* Añade espacio entre el texto y la barra de progreso */
+    padding: 5px; /* Reduce el padding */
+  }
+
+  .barra-progreso {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    height: 25px; /* Reduce la altura de la barra */
+  }
+
+  .progreso {
+    line-height: 25px; /* Ajusta la altura del texto dentro de la barra */
+  }
+
+  .idioma h3 {
+    font-size: 1.5rem; /* Reduce el tamaño de fuente */
+    margin-right: 0; /* Elimina el margen para ajustar al diseño vertical */
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .idioma-container {
+    grid-template-columns: repeat(2, 1fr); /* Cambia a dos columnas */
+    gap: 30px; /* Ajusta el espacio entre elementos */
+    max-width: 80vw; /* Ajusta el ancho de la sección */
+  }
+
+  .idioma {
+    padding: 8px; /* Reduce el padding */
+    gap: 20px; /* Espacio ajustado entre el texto y la barra */
+  }
+
+  .barra-progreso {
+    width: 80%; /* Ajusta el tamaño de la barra */
+    height: 28px; /* Ajusta la altura de la barra */
+  }
+
+  .idioma h3 {
+    font-size: 1.6rem; /* Ajusta el tamaño de la fuente */
+  }
 }
 
 
